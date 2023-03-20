@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* COMMONS */
+
+
+input {  
+    font-size: 1.2rem;
+    line-height: 1rem; 
+    width: 100%; 
+    height: 2rem; 
+    padding: 0.3rem; 
+    outline: none; 
+    border: none; 
+} 
+
+button:hover { 
+    cursor: pointer; 
+} 
+
+/* UTILITIES */
+
+
+/* MAIN CONTEINER OF ALL */
+.container{
+    width: 100%;
+    height: 100vh;    
+    position: relative;
+}
+
+
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    z-index: 999;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(98, 191, 222);
+    display: flex;
+    align-items: center;
+}
+
+.edu-logo>img{
+    max-width: 7rem;
+    margin-left: 2rem;
+}
+
+
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+}
+
+.wrapper{
+    width: 50%;
+}
+
+
+.form-wrapper{
+
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    /* height: 60%; */
+    margin: 0 auto;
+    /* padding: 1rem; */
+    
+}
+
+.form-title{
+    margin: 1.5rem auto;
+    padding-top: 4rem;
+    text-align: center;
+    color: rgba(73, 73, 126, 0.978);
+}
+.form-row{
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.form_group{
+    width: 80%; 
+    margin: 1rem auto;
+    /* position: relative;  */
+    border-bottom: 1px solid black; 
+}
+
+    
+.submit{
+
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.8rem;
+    margin: 1.8rem auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    color: white;
+    width: 80%;
+}
+.account-link{
+    margin: 1rem auto;
+    text-align: center;
+}
+
