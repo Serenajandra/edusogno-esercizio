@@ -1,3 +1,17 @@
+<?php
+
+include __DIR__ . "/functions.php";
+
+// if (isset($_GET["length"])) {
+//     $passwd_legth = intval($_GET["length"]);
+//     $allow_duplicates = $_GET["allow-duplicates"] === "1" ? true : false;
+//     $characters = $_GET["characters"] ?? [];
+//     $result = generatePassword($passwd_legth, $allow_duplicates, $characters);
+// }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +37,7 @@
                 <h2 class="form-title">Crea il tuo account</h2>
 
                 <div class="form-wrapper">
-                    <form action="index.php" method="GET">
+                    <form action="index.php" method="POST">
                         <div class="form-row">
 
                             <div class="form_group">
@@ -43,9 +57,11 @@
                                 <input type="password" name="password" id="password" class="">
                             </div>
                             <div>
-                                <button class="submit" type="submit">Registrati
+                                <button class="submit" type="submit">
+                                    Registrati
                                 </button>
                             </div>
+
                             <div class="account-link">
                                 <a href="">Hai già un account? Accedi</a>
                             </div>
