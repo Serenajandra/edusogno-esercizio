@@ -27,7 +27,7 @@ include __DIR__ . "/scripts/register.php";
                 <h2 class="title">Crea il tuo account</h2>
 
                 <div class="form-wrapper">
-                    <form action="scripts/register.php" method="POST">
+                    <form action="scripts/register.php" method="POST" onsubmit="return validaRegistration(this)">
                         <div class="form-row">
 
                             <div class="form_group">
@@ -63,5 +63,6 @@ include __DIR__ . "/scripts/register.php";
         </main>
     </div>
 </body>
+<script src="./assets/js/script.js"></script>
 
 </html>

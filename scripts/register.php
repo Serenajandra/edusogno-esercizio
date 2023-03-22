@@ -32,6 +32,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // var_dump($name, $surname, $email, $password_hashed);
 
 
+        // Verifica se l'indirizzo e-mail è già presente nel database
+        $sqlMail = "SELECT * FROM `utenti` WHERE `email` = '$email'";
+        $resultMail = mysqli_query($conn, $sqlMail);
+
+        if (mysqli_num_rows($resultMail) > 0) {
+            // L'indirizzo e-mail è già presente nel database
+            // Mostra un messaggio di errore all'utente
+            echo 'L`indirizzo e-mail inserito è già in uso. Torna alla pagina di <a href="../register-page.php">registrazione</a> e scegline un altro.';
+            return;
+        }
         // Scrivo la query e la eseguo
         $sql = "INSERT INTO utenti (nome, cognome, email, password)
         VALUES ('$name', '$surname', '$email', '$md5password')";

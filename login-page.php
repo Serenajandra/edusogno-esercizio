@@ -27,7 +27,7 @@ include('scripts/login.php');
                 <h2 class="title">Hai già un account?</h2>
 
                 <div class="form-wrapper">
-                    <form action="scripts/login.php" method="POST">
+                    <form action="scripts/login.php" method="POST" onsubmit="return validaLogin(this)">
                         <div class="form-row">
 
                             <div class="form_group">
@@ -55,5 +55,6 @@ include('scripts/login.php');
         </main>
     </div>
 </body>
+<script src="./assets/js/script.js"></script>
 
 </html>
