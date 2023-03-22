@@ -27,9 +27,12 @@ include __DIR__ . "/scripts/personal.php";
         <main>
             <div class="wrapper">
                 <h2 class="title text-center">
-                    Ciao <?php echo
-                            $_SESSION["username"];
-                            ?>, ecco i tuoi eventi:
+                    Ciao <?php
+                            echo $_SESSION["username"];
+                            ?>
+
+                    <?php echo $_SESSION["userSurname"];
+                    ?>, ecco i tuoi eventi:
                 </h2>
                 <div class="row centered">
                     <?php

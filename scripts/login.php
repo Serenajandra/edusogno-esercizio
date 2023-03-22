@@ -43,6 +43,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $user = $result->fetch_assoc();
         $_SESSION["userId"] = $user["id"];
         $_SESSION["username"] = $user["nome"];
+        $_SESSION["userSurname"] = $user["cognome"];
         $_SESSION["email"] = $user["email"];
 
         // Chiudo la connessione al DB
