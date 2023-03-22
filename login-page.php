@@ -1,16 +1,7 @@
 <?php
-
-include __DIR__ . "/functions.php";
-
-// if (isset($_GET["length"])) {
-//     $passwd_legth = intval($_GET["length"]);
-//     $allow_duplicates = $_GET["allow-duplicates"] === "1" ? true : false;
-//     $characters = $_GET["characters"] ?? [];
-//     $result = generatePassword($passwd_legth, $allow_duplicates, $characters);
-// }
-
+session_start();
+include('scripts/login.php');
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,36 +11,27 @@ include __DIR__ . "/functions.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.css">
+
     <title>Edusogno</title>
 </head>
 
 <body>
 
     <div class="container">
-        <header>
-            <div class="edu-logo">
-                <img src="./assets/img/logo-black.svg" alt="">
-            </div>
-        </header>
+        <?php
+        include __DIR__ . "./partials/header.php";
+        ?>
         <main>
 
             <div class="wrapper">
-                <h2 class="form-title">Crea il tuo account</h2>
+                <h2 class="title">Hai già un account?</h2>
 
                 <div class="form-wrapper">
-                    <form action="index.php" method="POST">
+                    <form action="scripts/login.php" method="POST">
                         <div class="form-row">
 
                             <div class="form_group">
-                                <label for="name" class="">Inserisci il nome</label>
-                                <input type="text" name="name" id="name" class="">
-                            </div>
-                            <div class="form_group">
-                                <label for="surname" class="">Inserisci il cognome</label>
-                                <input type="text" name="surname" id="surname" class="">
-                            </div>
-                            <div class="form_group">
-                                <label for="email" class="">Inserisci l'email</label>
+                                <label for="email" class="">Inserisci l'e-mail</label>
                                 <input type="email" name="email" id="email" class="">
                             </div>
                             <div class="form_group">
@@ -58,12 +40,12 @@ include __DIR__ . "/functions.php";
                             </div>
                             <div>
                                 <button class="submit" type="submit">
-                                    Registrati
+                                    Accedi
                                 </button>
                             </div>
 
                             <div class="account-link">
-                                <a href="">Hai già un account? Accedi</a>
+                                <a href="register-page.php">Non hai un profilo? Registrati</a>
                             </div>
                         </div>
 
