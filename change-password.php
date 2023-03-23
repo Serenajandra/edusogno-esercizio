@@ -61,6 +61,7 @@ include __DIR__ . "/scripts/password.php";
         </div>
 
     </main>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
