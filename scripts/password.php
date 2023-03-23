@@ -44,4 +44,4 @@ if (!isset($error)) {
     mysqli_close($conn);
     echo "Modifica della password avvenuta con successo.";
 }
-var_dump($old_password, $new_password, $old_md5password, $new_md5password);
+// var_dump($old_password, $new_password, $old_md5password, $new_md5password);
