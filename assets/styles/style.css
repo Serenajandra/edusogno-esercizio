@@ -26,6 +26,13 @@ button:hover {
     cursor: pointer; 
 } 
 
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
 
 /* UTILITIES */
 
@@ -160,3 +167,26 @@ main{
     border:1px solid red;
 }
 
+.dashboard{
+    width: 10rem;
+    /* height: 100%; */
+    /* z-index: 999; */
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px rgb(98, 191, 222);
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    margin-right: 2rem;
+    top: 2rem;
+    /* transform: translateY(-50%); */
+}
+
+.dashboard-link{
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.8rem;
+    margin-left: 1.3rem;
+    text-transform: uppercase;
+    color: white;
+}

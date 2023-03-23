@@ -55,16 +55,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $_SESSION["username"] = "";
         // Chiudo la connessione al DB
         mysqli_close($conn);
-        echo '<div class= "bad-response">
-                    Nessun utente trovato. Verifica le tue credenziali oppure <span class="account-link"><a href="../register-page.php">Registrati</a></span>
-                </div>';
+        echo ' Non è stata trovata alcuna corrispondenza. Verifica le tue credenziali e <a href="../login-page.php">ritenta</a> oppure <a href="../register-page.php">Registrati</a>';
         // echo "<script>alert('Nessun utente trovato. Verifica le tue credenziali o vai alla pagina di registrazione');</script>";
         // header("Location: ../login-page.php", true, 302);
     }
 }
-
-
-// Se l'utente ha fatto login
-// if (isset($_SESSION["userId"]) && $_SESSION["userId"] !== 0) {
-//     header("Location: personal-page.php");
-// }

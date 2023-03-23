@@ -1,10 +1,7 @@
 <?php
 session_start();
 include __DIR__ . "/scripts/personal.php";
-
-// if (!isset($_SESSION["password"])) {
-//     header("Location: __DIR__ login-page.php");
-// } else {
+include __DIR__ . "/scripts/password.php";
 ?>
 
 
@@ -25,6 +22,23 @@ include __DIR__ . "/scripts/personal.php";
         include('./partials/header.php');
         ?>
         <main>
+            <div class="dashboard">
+                <ul>
+                    <li>
+                        <div>
+                            <form method="POST" action="scripts/send-mail.php">
+                                <input type="hidden" value="<?php echo $_SESSION["email"]; ?>" name="email">
+                                <button class="submit" type="submit" name="send_email">Richiedi modifica password</button>
+                            </form>
+
+                        </div>
+                    </li>
+                    <!-- <li><a href="change-password.php">Reimposta la tua password</a></li> -->
+                    <li> <a class="dashboard-link" href="logout.php">Logout</a></li>
+                    <!-- <li><a class="submit" href=""></a>Altri eventi</li> -->
+
+                </ul>
+            </div>
             <div class="wrapper">
                 <h2 class="title text-center">
                     Ciao <?php
@@ -50,14 +64,13 @@ include __DIR__ . "/scripts/personal.php";
                     }
                     ?>
                 </div>
-                <a href="logout.php">Logout</a>
+
+
             </div>
+
         </main>
     </div>
 
 </body>
 
 </html>
-<?php
-// }
-?>
