@@ -18,7 +18,7 @@ include __DIR__ . "/scripts/password.php";
     <?php
     include('./partials/header.php');
     // Genero un token univoco
-    $token = uniqid();
+    // $token = uniqid();
     // creo il token
     // $length = 16; // Adjust length to fit your new paranoia level. 16 is probably a sane default and the same length as md5 (if you are migrating from a method that uses it)
     // $token = bin2hex(random_bytes($length)); // bin2hex output is url safe.
@@ -54,12 +54,9 @@ include __DIR__ . "/scripts/password.php";
                             </button>
                         </div>
 
-                        <!-- <div class="account-link">
-                            <a href="register-page.php">Non hai un profilo? Registrati</a>
-                        </div> -->
                     </div>
 
-                    <!-- </form> -->
+                </form>
             </div>
         </div>
 

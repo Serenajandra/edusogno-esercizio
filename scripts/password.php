@@ -1,13 +1,6 @@
 <?php
 session_start();
 
-// if (!isset($_SESSION['user_id'])) {
-//     // l'utente non è loggato, redirigi alla pagina di accesso
-//     header('Location: ../login.php');
-//     exit();
-// }
-
-
 // Recupero i dati del form
 $old_password = $_POST['old_password'];
 $new_password = $_POST['new_password'];
